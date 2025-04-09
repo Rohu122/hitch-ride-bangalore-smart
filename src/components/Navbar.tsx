@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { MenuIcon, X } from "lucide-react";
+import { MenuIcon, X, LogIn, UserPlus } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -49,7 +49,16 @@ const Navbar = () => {
           <a href="#map" className="text-gray-700 hover:text-eco transition-colors">
             Live Map
           </a>
-          <Button className="btn-primary">Download App</Button>
+          <div className="flex space-x-4">
+            <Button variant="outline" className="flex items-center gap-2">
+              <LogIn className="h-4 w-4" />
+              Sign In
+            </Button>
+            <Button className="btn-primary flex items-center gap-2">
+              <UserPlus className="h-4 w-4" />
+              Sign Up
+            </Button>
+          </div>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -98,10 +107,19 @@ const Navbar = () => {
               Live Map
             </a>
             <Button 
-              className="btn-primary w-full"
+              variant="outline"
+              className="w-full flex items-center justify-center gap-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Download App
+              <LogIn className="h-4 w-4" />
+              Sign In
+            </Button>
+            <Button 
+              className="btn-primary w-full flex items-center justify-center gap-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <UserPlus className="h-4 w-4" />
+              Sign Up
             </Button>
           </nav>
         </div>
