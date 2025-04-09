@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -10,13 +9,12 @@ import WhyHitchRide from '@/components/WhyHitchRide';
 import Testimonials from '@/components/Testimonials';
 import Footer from '@/components/Footer';
 import useScrollAnimation from '@/utils/useScrollAnimation';
+import PremiumBenefits from '@/components/PremiumBenefits';
 
 const Index = () => {
-  // Initialize scroll animations
   useScrollAnimation();
 
   useEffect(() => {
-    // Set page title
     document.title = 'Hitch Ride - A Smarter Way to Share Rides in Bengaluru';
   }, []);
 
@@ -27,6 +25,7 @@ const Index = () => {
         <Hero />
         <HowItWorks />
         <EcoPoints />
+        <PremiumBenefits />
         <Safety />
         <WhyHitchRide />
         <MapSection />
